@@ -64,7 +64,8 @@ class Graph:
                 break
 
             # Now the cost for the neighbours will be updated according to the cost relative to the source
-            # If the
+            # If is shorter, the shortest distance will be updated along with the previous_node
+            # indicating we now have a shortest path.
             for neighbour, cost in self.neighbours[current_node]:
                 alternative_route = shortest_distance_from_source[current_node] + cost
                 if alternative_route < shortest_distance_from_source[neighbour]:
