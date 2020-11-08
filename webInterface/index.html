@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Title -->
+    <title>Interface REST</title>
+    <link rel="shortcut icon" href="assets/air.ico" />
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <section id="home">
+      <div class="main-container">
+        <div class="full-width">
+          <form action="#" class="form-query-route needs-validation" novalidate>
+            <h6 class="title">Routes Query:</h6>
+            <div class="route-container">
+              <input
+                type="text"
+                class="form-control"
+                id="query-start-input"
+                name="start"
+                placeholder="FROM: GRU"
+                required
+                pattern="[A-Za-z]{3}"
+              />
+              <input
+                type="text"
+                class="form-control"
+                id="query-end-input"
+                name="end"
+                placeholder="TO: ORL"
+                required
+                pattern="[A-Za-z]{3}"
+              />
+              <button
+                id="btn-query-route"
+                class="btn btn-general btn-white"
+                type="submit"
+              >
+                QUERY
+              </button>
+            </div>
+          </form>
+          <div class="result-titles result-query-title hidden">
+            <h3>Result:</h3>
+            <h4 id="result-query"></h4>
+          </div>
+          <div
+            class="alert alert-danger alert-route-query hidden m"
+            role="alert"
+          >
+            Please insert a valid entry.
+          </div>
+        </div>
+        <div id="add-route" class="full-width">
+          <form action="#" class="form-add-route needs-validation" novalidate>
+            <h6 class="title">Add new route:</h6>
+            <div class="route-container">
+              <input
+                type="text"
+                class="form-control"
+                id="new-start"
+                name="start"
+                placeholder="FROM: GRU"
+                required
+                pattern="[A-Za-z]{3}"
+              />
+              <input
+                type="text"
+                class="form-control"
+                id="new-end"
+                name="end"
+                placeholder="TO: ORL"
+                required
+                pattern="[A-Za-z]{3}"
+              />
+              <input
+                type="number"
+                class="form-control"
+                id="new-cost"
+                name="cost"
+                placeholder="COST: 40"
+                required
+                pattern="[0-9]"
+              />
+              <button
+                id="btn-add-route"
+                class="btn btn-general btn-white"
+                type="submit"
+              >
+                ADD
+              </button>
+            </div>
+          </form>
+          <div class="alert alert-danger alert-route-add hidden m" role="alert">
+            Please insert a valid entry.
+          </div>
+          <div class="alert alert-success hidden m" role="alert">
+            Route added successfully.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
