@@ -72,7 +72,7 @@ for its flexibility and simple development model.
 For the search algorithm Dijkstra was chosen, which proposes the
 calculation of the least cost path between the vertices of a graph.
 
-### API Rest
+### REST API
 
 The API has 2 endpoints:
 
